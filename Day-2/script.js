@@ -115,27 +115,28 @@
 
 //Check Triangle Type Using Sides and Angles
 
-const a = Number(prompt("Enter the first number"))
-const b = Number(prompt("Enter the first number"))
-const c = Number(prompt("Enter the first number"))
+const income = Number(prompt("Enter the income"))
+var tax;
+if(income<=250000){
+    console.log("No Tax  😊😊")
 
-
-console.log(a,b,c)
-console.log(c*c , a*a ,b*b)
-if(a==b && b==c){
-    console.log("Equlateral Triangle")
-}
-else if(a==b || b==c || c==a){
-    console.log("Isosseles Triangle")
+   
+}else if(income==250001 || income<=500000){
+ tax =   (income/100)*5
+ console.log("your tax",tax)
 }
 
-else if(c*c == a*a + b*b ||  b*b == a*a + c*c ||  a*a == b*b + c*c ){
-    
-
-    console.log("Right Angle Triange")
-}else{
-    console.log("Scalen triangle")
+else if(income==500001 || income<=1000000){
+    tax = (income/100)*20
+    console.log("you tax",tax)
+}else {
+    tax = (income/100)*30
+    console.log("your tax",tax)
 }
+
+
+
+
 
 
 
