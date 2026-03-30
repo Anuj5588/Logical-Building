@@ -101,18 +101,61 @@ let num = Number(prompt("Enter the number"));
 // console.log(greatenum, "is greatest")
 // console.log(lownum, "is smallest")
 
-while(num>0){
-  
-     temp = 5
-     while(temp>0){
-     let fact = 1
-     fact = fact*temp
-     temp = temp-1
-     let fact1 = fact
-     console.log(fact1)
-     num = num-1
-     }
+// function factorial(num){
+//   let fact = 1
+//     for(let i=1; i<=num; i++){
+//      let temp =num
+//      fact *= i;
+//      }
+// return fact
 
+// }
+//  let sum =0
+//  let original = num
+// while(num>0){
+//      let partNum = num%10
+//  sum = sum + factorial(partNum)
+//  num = (num-partNum)/10
+// }
+
+// if(sum == original){
+//      console.log("this is strong number", sum)
+// }
+
+//**Check if a Number is an Automorphic Number**
+// let original = num
+// let square = Math.pow(original, 2)
+// while (num>0){
+//      let squareDigit = square%10
+//      let numDigit = num%10
+//      if(numDigit !== squareDigit){
+//           console.log("Not Autopmorphic")
+//           break;
+//      }
+//      num = (num-(numDigit))/10
+//      square = (square-(squareDigit))/10
+
+
+// }
+
+// if(num==0){
+//      console.log("it's a automorphic number")
+// }
+
+//Check if a Number is a Harshad Number
+let sum =0;
+let original = num
+while(num>0){
+     let digit = num%10;
+     sum = sum + digit;
+     num = (num-digit)/10
+    
 
 }
 
+console.log(sum)
+console.log(original)
+
+if(original % sum ==0){
+     console.log("Number is Harshad Number", original)
+}
